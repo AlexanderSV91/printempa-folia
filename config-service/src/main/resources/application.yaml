@@ -1,0 +1,21 @@
+server:
+  port: ${CONFIG_SERVICE_PORT}
+
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:configs
+        git:
+          uri: https://github.com/${GIT_USER}/${GIT_CONFIG_REPOSITORY}
+          clone-on-start: true
+          default-label: master
+
+logging:
+  level:
+    org.springframework: info
