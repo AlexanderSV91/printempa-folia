@@ -3,9 +3,9 @@ server:
 
 spring:
   application:
-    name: config-service
+    name: ${CONFIG_SERVICE_NAME}
   profiles:
-    active: git
+    active: native
   cloud:
     config:
       server:
