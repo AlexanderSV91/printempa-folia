@@ -16,6 +16,17 @@ spring:
           clone-on-start: true
           default-label: master
 
+management:
+  info:
+    java:
+      enabled: true
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 logging:
   level:
     org.springframework: info

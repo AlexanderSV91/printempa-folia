@@ -9,6 +9,11 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:${DISCOVERY_SERVICE_PORT}/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
 
 management:
   info:
@@ -16,6 +21,10 @@ management:
       enabled: true
     env:
       enabled: true
+  endpoints:
+        web:
+          exposure:
+            include: "*"
 
 logging:
   level:
