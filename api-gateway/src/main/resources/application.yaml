@@ -1,0 +1,7 @@
+spring:
+  config:
+    import: "configserver:"
+  cloud:
+    config:
+      uri: http://localhost:${CONFIG_SERVICE_PORT}
+      name: ${API_GATEWAY_NAME}
