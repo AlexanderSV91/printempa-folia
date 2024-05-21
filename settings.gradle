@@ -1,2 +1,2 @@
 rootProject.name = 'printempa-folia'
-include 'config-service', 'discovery-service', 'api-gateway'
+include 'config-service', 'discovery-service', 'api-gateway', 'url-shortener-service'
